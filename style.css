@@ -12,25 +12,13 @@ header {
     margin-right:auto;
 }
 
-#works img {
-    margin-right: 10px;
-    box-shadow: 3px 3px 5px #666;
-    -webkit-box-shadow: 3px 3px 5px #666;
-    -moz-box-shadow: 3px 3px 5px #666;
-}
 
 #about img {
-    max-width: 140px;
-    border: 5px solid #fff;
-    border-radius: 100%;
+    max-width: 130px;
+    border: 3px solid #fff;
+    border-radius: 10%;
 }
 
-#about p {
-    float:right;
-    overflow: hidden;
-    font-size:96%;
-    line-height: 150%;
-}
 
 #contact {
     margin:0 0 60px 0;
@@ -89,3 +77,9 @@ footer {
     margin-right: 30px;
 }
 
+
+
+.about_text{
+        width: 500px;
+        float: right;
+}

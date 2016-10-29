@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sample</title>
+    <meta name="description" content="アメリカ西海岸でのweb制作相談。生活相談受け付けます。">
+    <meta name="keywords" content="web制作,フリーランス,Webサービス,アメリカ西海岸,相談">
+    <meta name="author" content="Mariko Okuizumi">
+    <title>Mariko O Portfolio</title>
     <!-- BootstrapのCSS読み込み -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- jQuery読み込み -->
@@ -12,6 +15,7 @@
     <!-- BootstrapのJS読み込み -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
+</head>
     <nav>
         <header>
         <ul>
@@ -24,75 +28,113 @@
         </div>
         </header>
     </nav>
-  </head>
   <body>
       <div class="container">
         <section>
         <div id="works">
             <h2>Works</h2>
-              <img src="img_demo1.jpg" alt="" height="160"> 
-              <img src="img_demo2.jpg" alt="" height="160"> 
-              <img src="img_demo3.jpg" alt="" height="160"> 
         </div>
+        <!--カルーセル-->
+        <div id="sampleCarousel" class="carousel slide" data-ride="carousel">
+        	<ol class="carousel-indicators">
+        		<li class="active" data-target="#sampleCarousel" data-slide-to="0"></li>
+        		<li data-target="#sampleCarousel" data-slide-to="1"></li>
+        		<li data-target="#sampleCarousel" data-slide-to="2"></li>
+        	</ol>
+        	<div class="carousel-inner" role="listbox">
+        		<div class="item active">
+        			<img src="img_demo1.jpg" alt="First slide">
+        		</div>
+        		<div class="item">
+        			<img src="img_demo2.jpg" alt="Second slide">
+        		</div>
+        		<div class="item">
+        			<img src="img_demo3.jpg" alt="Third slide">
+        		</div>
+        	</div>
+        	<a class="left carousel-control" href="#sampleCarousel" role="button" data-slide="prev">
+        		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        		<span class="sr-only">前へ</span>
+        	</a>
+        	<a class="right carousel-control" href="#sampleCarousel" role="button" data-slide="next">
+        		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        		<span class="sr-only">次へ</span>
+        	</a>
+        </div>
+
+  <table class="table">
         <div id="about">
             <h2>About</h2>
-            <p>テストテストテストテストテストテストテストテストテスト<br>
-            テストテストテストテストテストテストテストテストテスト<br>
-            テストテストテストテストテストテストテスト</p>
+            <p class="about_text">新卒で入社した会社では事務職をしていたものの
+            一念発起でwebの業界に足を踏み入れる。デジタルハリウッド御茶ノ水校で
+            webデザイナーコースをとっていたはずが年齢と業界の壁を感じ未経験でも面接出来た会社でおwebディレクターから経歴スタート。<br><br>
+            一身上の都合で海外に居を移すも気がつけば日本の会社とwebのお仕事ををさせていただいているという名目のもと、日々引きこもっています。</p>
             <img src="img_portfolio.jpg" alt="">
+            <p class="about_link">
+              <ul>
+                <li><a href="https://github.com/iconM" target="blank"><img src="logo_github.jpg" alt="GitHub" height="30px"></a></li>
+                <li><a href=""><img src="logo_linkedin.png" alt="linkedin" height="25px"></a></li>
+                <li><a href=""><img src="logo_instagram.png" alt="instagram" height="30px"></a></li>
+              </ul>
+            </p>
         </div>
         <div id="contact">
         <h2>Contact</h2>
+      <div class="row">
         <div class="content col-sm-12">
-          <h3>メールによるお問い合わせ</h3>
           <p>お問い合わせの回答は、受付日から3日以内をめどにご返信差し上げます。</p>
           <form class="form-horizontal">
             <div class="form-group">
+              <label for="inputCompany" class="col-md-3 control-label">会社名</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="inputCompany" placeholder="例）株式会社テスト">
+              </div>
+            </div>
               <div class="form-group">
-              <label for="inputName" class="col-md-2 control-label">氏名</label>
-              <div class="col-md-10">
-                <input type="text" class="form-control" id="inputName" placeholder="例）テスト太郎">
+              <label for="inputName" class="col-md-3 control-label">氏名</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="inputName" placeholder="例）テスト送信">
               </div>
             </div>
             <div class="form-group">
-              <label for="inputEmail" class="col-md-2 control-label">メールアドレス</label>
-              <div class="col-md-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="例）sample.test@sample.com">
+              <label for="inputEmail" class="col-md-3 control-label">メールアドレス</label>
+              <div class="col-md-9">
+                <input type="email" class="form-control" id="inputEmail" placeholder="例）test@test.com">
               </div>
             </div>
             <div class="form-group">
-              <label for="inputTel" class="col-md-2 control-label">電話番号</label>
-              <div class="col-md-10">
-                <input type="tel" class="form-control" id="inputTel" placeholder="例）012345678">
+              <label for="inputTel" class="col-md-3 control-label">電話番号</label>
+              <div class="col-md-9">
+                <input type="tel" class="form-control" id="inputTel" placeholder="例）0123456789">
               </div>
             </div>
             <div class="form-group">
-              <label for="inputContent" class="col-md-2 control-label">お問い合わせ内容</label>
-              <div class="col-md-10">
-                <textarea class="form-control" id="inputContent" rows="4" placeholder="具体的にお書きください"></textarea>
+              <label for="inputContent" class="col-md-3 control-label">お問い合わせ内容</label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="inputContent" rows="4" placeholder="ご相談内容をご記入ください"></textarea>
               </div>
             </div>
             <div class="form-group">
-              <div class="col-md-offset-2 col-md-10">
+              <div class="col-md-offset-3 col-md-9">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox">内容にに相違ないかご確認後、チェックを入れて送信ください。
+                    <input type="checkbox">ご相談内容ををご確認いただいた後、チェックを入れてください。
+                  </label>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-10">
+              <div class="col-sm-offset-0 col-sm-12">
                 <button type="submit" class="btn btn-default btn-success btn-block">お問い合わせを送信</button>
               </div>
             </div>
           </form>
-          
         </div>
-        </div>
-        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="copyright">© 2016 Mariko O.</div>
+    </footer>
         </section>
-        <footer>
-          <p>&copy; 2016 Mariko O.</p>
-        </footer>
   </body>
 </html>
